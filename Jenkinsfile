@@ -7,6 +7,12 @@ pipeline{
                  sh 'ls -l'
             }
             }
+        stage("Build and test"){
+            steps{
+                sh "mvn clean install"
+            }
+        }
+            
         
     }    
     
