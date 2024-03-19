@@ -40,15 +40,20 @@
             <scope>test</scope>
         </dependency>
     </dependencies>
- 
     <build>
         <plugins>
-            <plugin>
-                <groupId>org.springframework.boot</groupId>
-                <artifactId>spring-boot-maven-plugin</artifactId>
-            </plugin>
+         <plugin>
+          <groupId>org.springframework.boot</groupId>
+                 <artifactId>spring-boot-maven-plugin</artifactId>
+                 <configuration>
+                    <skip>true</skip>
+                 </configuration>
+                 <executions>
+                    <execution>
+                       <phase>none</phase>
+                    </execution>
+                 </executions>
+         </plugin>
         </plugins>
-	<finalName>springbootApp</finalName>
     </build>
- 
 </project>
